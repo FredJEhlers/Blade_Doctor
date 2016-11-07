@@ -12,3 +12,8 @@ body {
   height: 160px; 
   float: right; 
 }
+
+.b_a_img {
+  display: inline;
+  margin: 5px;
+}
