@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Blade Doctor </title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/home.css" rel="stylesheet">
+        <script src="js/jquery-3.1.1.js"></script>
+    </head>
+
+    <body>
+        <script src="js/bootstrap.min.js"></script>
+        <div class="jumbotron text-center">
+            <h1>Blade Doctor</h1>
+            <p>Professional German Blade-Sharpeing Service</p> 
+        </div>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>Types of blades and prices</h3>
+                    <p>List all the prices</p>
+                 </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>Before and after pictures</h3>
+                    <p>Display images</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>Training</h3> 
+                    <p>Details of training</p>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>Contact</h3>
+                    <p>Roeland Hein </p>
+                    <p>072 258 8890 (call or whatsapp)</p>
+                    <p>email: knivedoctor@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div id="pageone" class="col-sm-12 ">
+                    <h3>SirVic: Gold coins and diamonds exhange</h3>
+                    <a href="#" id="pop">
+                        <img id ="imageresource" src="images/SirVic.jpg" alt="SirVic advert" style="width:200px;">
+                    </a>
+                    <p>Click the image to enlarge</p>
+
+                    <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Image preview</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="" id="imagepreview" style="width: 550px; height: 800px;" >
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>$("#pop").on("click", function() {
+                        $('#imagepreview').attr('src', $('#imageresource').attr('src')); 
+                        $('#imagemodal').modal('show');});
+                    </script>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
