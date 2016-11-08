@@ -20,12 +20,9 @@ body {
 /* Comment box css */
 
 #wrap{
-border: 1px solid lightgray;
-alignment-adjust: central;
 width: 1000px;
 margin-left: 50px;
 margin-top: 10px;
-box-shadow: 0 5px 0 #e6e6e6;
 padding-bottom: 50px;
 }
 
@@ -87,6 +84,10 @@ height: 40px;
 padding-left: 10px;
 width: 650px;
 height: 200px;
+}
+
+#comment-name, #comment-email{
+  padding-bottom: 10px;
 }
 
 #commentSubmit{
