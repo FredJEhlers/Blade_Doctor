@@ -19,13 +19,6 @@ body {
 
 /* Comment box css */
 
-#wrap{
-width: 1000px;
-margin-left: 50px;
-margin-top: 10px;
-padding-bottom: 50px;
-}
-
 h2.comment-headers{
 color: blue-violet;
 text-align: center;
@@ -86,7 +79,7 @@ width: 650px;
 height: 200px;
 }
 
-#comment-name, #comment-email{
+#comment-name, #comment-email, #comment-message{
   padding-bottom: 10px;
 }
 
