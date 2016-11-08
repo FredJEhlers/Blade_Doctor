@@ -13,16 +13,56 @@
     <body>
         <script src="js/bootstrap.min.js"></script>
         <div class=" jumbotron text-center" style="background-color:transparent; !important">
-            <img class="img-rounded" id="flag" src="images/Flag_of_germany.jpg" alt = "German flag">
-            <h1 style="color: red">Blade Doctor</h1>
-            <p style="color: yellow">Professional German Blade-Sharpeing Service</p>
-
+            <div class="row">
+                <div class="col-sm-4">
+                </div>
+                <div class="col-sm-4">
+                    <h1 style="color: red">Blade Doctor</h1>
+                    <p style="color: yellow">Professional German Blade-Sharpeing Service</p>
+                </div>
+                <div class="col-sm-4"> 
+                    <img class="img-rounded" id="flag" src="images/Flag_of_germany.jpg" alt = "German flag">
+                </div>
+            </div>
         </div>
         <div class="container text-center">
             <div class="row">
-                <div class="col-sm-12">
+                <h2>About us</h2>
+                <h4>We are a Pretoria-based company that specialises in sharpening:</h4>
+                <p>
+                    Our mission is to provide reliable, fast, precision sharpening with exceptional customer service. 
+                    By providing you with high-quality sharpening in a fraction of the time, we help to increase the 
+                    efficiency and success of your business - sharpening your potential.
+                </p>
+
+                <p>
+                  After extensive research, we have established that the majority of Restaurants etc. are paying 
+                  exorbitant prices for brand new utensils and instruments.  We have as established that the majority of 
+                  owners have been investing in brand new utensils and instruments as opposed to having the old utensils 
+                  and instruments just sharpened at less than half the price or more.  
+                </p>
+
+                <h3>Example businesses that could benefit from our services</h3>
+                <ul style="list-style-type:none">
+                    <li>Hunting Safaris'</li>
+                    <li>Restaurants</li>
+                    <li>Catering</li>
+                    <li>Hotels</li>
+                    <li>Guest Houses</li>
+                    <li>Gardening Services</li>
+                    <li>Butcheries</li>
+                    <li>OR Home Use</li>
+                </ul>
+
+                <h2>Collection and Delivery and or done on premises for your convenience</h2>
+                <p>*PRETORIA BASED ONLY, RAM courier to be used if based outside of Pretoria</p><br>
+                <p>We have been in the Blade-sharpening industry for 11 years and we are professionals, as we are 
+                    utlising German Machinery!</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
                     <h3>Types of blades and prices</h3>
-                    <table class="table table-responsive">
+                    <table class="table table-responsive text-left align-center">
                         <thead>
                             <tr>
                                 <th>Type of Blade</th>
@@ -131,7 +171,7 @@
 
             <div class="row">
                 <div class="col-sm-12">
-                    <h3>Training</h3> 
+                    <h3>Sharpening Machinery Product and Training</strong></h3> 
                     <h4>Details of training</h4>
                     <p>Sharpening Machinery and training (1 day)</p>
                     <p>*Product sale and training included for:</p>
@@ -151,6 +191,42 @@
                 </div>
             </div>
 
+            </br>
+
+            <div class="col-sm-12">
+                <h2 class="comment-headers">Comment Box</h2>
+                <div id="wrap">
+                    <div id="main">
+                        <div class="row">
+                            <div class="col-sm-5 ">
+                                <h3>Comments</h3>
+                            </div>
+                            <div class="col-sm-7">
+                                <div id="upper_blank"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="comment text-left">Your email address will not be published. Required fields are marked *</p>                   <div id="form">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <form action="" method="POST" id="commentform">
+                                    <div id="comment-name" class="form-row">
+                                        <input type="text" placeholder="Name" name="dname" id="name" required>
+                                    </div>
+                                    <div id="comment-email" class="form-row">
+                                        <input type="email" placeholder="example@example.com (will not be published)" name="demail" id="email" required>
+                                    </div>
+                                    <div id="comment-message" class="form-row">
+                                        <textarea name="commentform" placeholder="Mesasge to Blade Doctor" id="comment"></textarea>
+                                    </div>
+                                    <a href="#"><input type="submit" name="dsubmit" id="commentSubmit" value="Submit Comment"></a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             </br>
 
             <div class="row">
