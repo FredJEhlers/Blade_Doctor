@@ -1,4 +1,6 @@
-body { 
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,600);
+
+body{  
   background-color: black;
   color: white;
   -webkit-background-size: cover;
@@ -7,17 +9,128 @@ body {
   background-size: cover;
 }
 
+td {
+  padding-top:20px;
+  padding-bottom:20px;
+  padding-right:20px;   
+}
+
+td:first-child {
+  padding-left:20px;
+  padding-right:0;
+}
+
 #flag {
   width:200px; 
   height: 160px; 
 }
 
-.b_a_img {
-  display: inline;
-  margin: 5px;
+.b_a_img{
+  width: 150px; 
+  height:150px;
 }
 
-/* Comment box css */
+.b_a_a{
+  float: left; 
+  background-color:transparent; /*important*/
+  padding: 15px;
+}
+
+.Sections, .small_sections, .large_paragraph{
+  padding: 10px;
+}
+
+/*comment box scsss*/
+
+span{
+  float: right;
+  margin-right: 10px;
+  font-size: 12px;
+  font-weight: 300;
+}  
+
+hr{
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+#commentOuter{
+  display: flex;
+  justify-content: center;
+}
+
+#commentBox{
+  width: 85%;
+  margin-top: 50px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+p.comments{
+  margin: 0 30px 15px;
+  font-weight: 300;
+  color: #333;
+  word-wrap: break-word;
+  background: #EEE;
+  padding: 5px 10px;
+}
+
+.header{
+  margin: 15px 20px;
+  font-size: 27px;
+  font-weight: 600;
+}
+
+form{
+  margin: 10px 10px 30px 10px; 
+  color: #CCC;
+  font-weight: 300;
+}
+
+input[type="text"], textarea{
+  margin: 5px 10px;
+  outline: none;
+  background: #efefef;
+  border: 0;
+  padding: 10px;
+}
+
+textarea{
+  resize: none;
+  width: 50%;
+  color: black;
+  
+}
+
+input[type="text"]{
+  width: 50%;
+  margin-bottom: 15px;
+  color: black;
+  
+}
+
+button{
+  font-weight: 400;
+  margin: 12px 0 0 10px;
+  border: 0;
+  color: #fff;
+  font-size: 15px;
+  background: #D3775D;
+  padding: 12px 20px 12px 20px;
+  text-decoration: none;
+  transition: all .2s ease;
+}
+
+&:hover{
+    background: #C15322
+}
+
+/* Comment box css 
 
 h2.comment-headers{
 color: blue-violet;
@@ -129,7 +242,7 @@ margin-right: 100px;
 width: 800px;
 }
 
-/*
+
 p{
 font-size: 18px;
 color: gray;
