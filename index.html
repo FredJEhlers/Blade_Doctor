@@ -6,19 +6,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title> Blade Doctor </title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/home.css" rel="stylesheet">
+        <link href="css/home.scss" rel="stylesheet">
+
+        <script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
+        <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDWqfDxT_fRYnM5eN7MHsSgjxmQaxbLsPo",
+            authDomain: "blade-doctor.firebaseapp.com",
+            databaseURL: "https://blade-doctor.firebaseio.com",
+            storageBucket: "blade-doctor.appspot.com",
+            messagingSenderId: "150085776216"
+        };
+        firebase.initializeApp(config);
+        </script>
+
         <script src="js/jquery-3.1.1.js"></script>
+        <script src="js/javascript.js"></script>
     </head>
 
     <body>
         <script src="js/bootstrap.min.js"></script>
-        <div class=" jumbotron text-center" style="background-color:transparent; !important">
+        <div id="jumboDiv" class=" jumbotron text-center">
             <div class="row">
                 <div class="col-sm-4">
                 </div>
                 <div class="col-sm-4">
-                    <h1 style="color: red">Blade Doctor</h1>
-                    <h5 style="color: yellow">Professional German Blade-Sharpeing Service</h5>
+                    <h1 id="jumboh1">Blade Doctor</h1>
+                    <h4 id="jumboh4">Professional German Blade-Sharpeing Service</h5>
                 </div>
                 <div class="col-sm-4"> 
                     <img class="img-rounded" id="flag" src="images/Flag_of_germany.jpg" alt = "German flag">
@@ -26,43 +41,48 @@
             </div>
         </div>
         <div class="container text-center">
-            <div class="row">
-                <h1>About us</h1>
-                <h4>We are a Pretoria-based company that specialises in sharpening:</h4>
-                <p>
+            <div class="row col-sm-8 center col-sm-offset-2">
+                <h1 class="Sections">About us</h1>
+                <h4 class="small_sections">We are a Pretoria-based company that specialises in sharpening:</h4>
+                <p class="large_paragraph">
                     Our mission is to provide reliable, fast, precision sharpening with exceptional customer service. 
                     By providing you with high-quality sharpening in a fraction of the time, we help to increase the 
                     efficiency and success of your business - sharpening your potential.
                 </p>
 
-                <p>
+                <p class="large_paragraph">
                   After extensive research, we have established that the majority of Restaurants etc. are paying 
                   exorbitant prices for brand new utensils and instruments.  We have as established that the majority of 
                   owners have been investing in brand new utensils and instruments as opposed to having the old utensils 
                   and instruments just sharpened at less than half the price or more.  
                 </p>
 
-                <h4>Example businesses that could benefit from our services</h4>
-                <ul style="list-style-type:none">
-                    <li>Hunting Safaris'</li>
-                    <li>Restaurants</li>
-                    <li>Catering</li>
-                    <li>Hotels</li>
-                    <li>Guest Houses</li>
-                    <li>Gardening Services</li>
-                    <li>Butcheries</li>
-                    <li>OR Home Use</li>
-                </ul>
-
-                <h4>Collection and Delivery and or done on premises for your convenience</h4>
-                <p>*PRETORIA BASED ONLY, RAM courier to be used if based outside of Pretoria</p><br>
-                <p>We have been in the Blade-sharpening industry for 11 years and we are professionals, as we are 
+                <h4 class="small_sections">Example businesses that could benefit from our services</h4>
+                <div dir="rtl" class="col-sm-6 text-right">
+                    <ul style="list-style-type:square">
+                        <li>Hunting Safaris</li>
+                        <li>Restaurants</li>
+                        <li>Catering</li>
+                        <li>Hotels</li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 text-left">
+                    <ul style="list-style-type:square">
+                        <li>Guest Houses</li>
+                        <li>Gardening Services</li>
+                        <li>Butcheries</li>
+                        <li>OR Home Use</li>
+                    </ul>
+                </div>
+                <p class="large_paragraph">Collection and Delivery and or done on premises for your convenience</p>
+                <p class="large_paragraph">*PRETORIA BASED ONLY, RAM courier to be used if based outside of Pretoria</p>
+                <p class="large_paragraph">We have been in the Blade-sharpening industry for 11 years and we are professionals, as we are 
                     utlising German Machinery!</p>
             </div>
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2">
-                    <h3>Types of Blades and Prices</h3>
-                    <table class="table table-responsive text-left align-center">
+                    <h1 class="Sections">Types of Blades and Prices</h3>
+                    <table cellpadding:"10" class="table table-responsive text-left align-center" >
                         <thead>
                             <tr>
                                 <th>Type of Blade</th>
@@ -132,59 +152,57 @@
                     <p class="text-uppercase">Contracts can be setup for businesses for future services and discounts!</strong></p>
                 </div>
             </div>
-            
-            </br>
 
             <div class="container">
-                    <h1>Before and after pictures</h1>
-                    <p>Click on images to view full picture</p>
-                    <div class="row" style="background-color:transparent; !important" >
-                        <div class="col-sm-3">
-                            <a href="images/knife_before.jpg" style="background-color:transparent; !important">
-                                <p style="color: white; !important">Before: a knife</p>
-                                <img src="images/knife_before.jpg" alt="knife before" style="width: 150px; height:150px">
+                <h1 class="Sections">Before and after pictures</h1>                
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <div class="col-sm-4 b_a_d col-sm-offset-1">
+                            <a href="images/knife_before.jpg" class="b_a_a">
+                                <p class="large_paragraph">Before: a knife</p>
+                                <img src="images/knife_before.jpg" alt="knife before" class ="b_a_img" >
                             </a>
                         </div>
-                        <div class="col-sm-3" >
-                            <a href="images/knife_after.jpg" style="background-color:transparent; !important">
-                                <p style="color: white; !important">After: a knife</p>
-                                <img src="images/knife_after.jpg" alt="knife after" style="width: 150px; height:150px">
-                            </a>
-                        </div>
-                 
-                        <div class="col-sm-3">
-                            <a href="images/bayonet_before.jpg" style="background-color:transparent; !important">
-                                <p style="color: white; !important">Before: a bayonet</p>
-                                <img src="images/bayonet_before.jpg" alt="bayonet before" style="width: 150px; height:150px">
-                            </a>
-                        </div>
-                        <div class="col-sm-3" >
-                            <a href="images/bayonet_after.jpg" style="background-color:transparent; !important">
-                                <p style="color: white; !important">After: a bayonet</p>
-                                <img src="images/bayonet_after.jpg" alt="bayonet after" style="width: 150px; height:150px">
+                        <div class="col-sm-4 b_a_d col-sm-offset-1">
+                            <a href="images/knife_after.jpg" class="b_a_a">
+                                <p class="large_paragraph">After: a knife</p>
+                                <img src="images/knife_after.jpg" alt="knife after" class ="b_a_img">
                             </a>
                         </div>
                     </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">                              
+                        <div class="col-sm-4 b_a_d col-sm-offset-1">
+                            <a href="images/bayonet_before.jpg" class="b_a_a">
+                                <p class="large_paragraph">Before: a bayonet</p>
+                                <img src="images/bayonet_before.jpg" alt="bayonet before" class ="b_a_img">
+                            </a>
+                        </div>
+                        <div class="col-sm-4 b_a_d col-sm-offset-1">
+                            <a href="images/bayonet_after.jpg" class="b_a_a">
+                                <p class="large_paragraph">After: a bayonet</p>
+                                <img src="images/bayonet_after.jpg" alt="bayonet after" class ="b_a_img">
+                            </a>
+                        </div>
+                    </div>
+                </div><p class="large_paragraph">Click on images to view full picture</p>
             </div>
-            
-            </br>
 
             <div class="row">
-                <div class="col-sm-12">
-                    <h1>Sharpening Machinery Product and Training</strong></h1> 
-                    <h4>Details of training</h4>
-                    <p>Sharpening Machinery and training (1 day)</p>
-                    <p>*Product sale and training included for:</p>
+                <div class="col-sm-8 col-sm-offset-2">
+                    <h1 class="Sections">Sharpening Machinery Product and Training</strong></h1> 
+                    <h4 class="small_sections">Details of training</h4>
+                    <p class="large_paragraph">Sharpening Machinery and training (1 day)</br>
+                                                *Product sale and training included for:</p>
                     <p class="text-uppercase">R8500</strong></p>
-                    <p>(Deposit of R1500 REQUIRED)</p>
+                    <p class="large_paragraph">(Deposit of R1500 REQUIRED)</p>
                 </div>
             </div>
-
-            </br>
         
             <div class="row">
-                <div class="col-sm-12">
-                    <h1>Contact</h1>
+                <div class="col-sm-8 col-sm-offset-2">
+                    <h1 class="Sections">Contact</h1>
                     <p>Roeland Hain CEO and Founder</p>
                     <p>072 258 8890 (call or whatsapp)</p>
                     <p>email: knivedoctor@gmail.com</p>
@@ -194,41 +212,13 @@
                 </div>
             </div>
 
-            </br>
-
-            <div class="col-sm-12">
-                <h1 class="comment-headers">Comment Box</h1>
-                <div id="wrap">
-                    <p class="comment">Your email address will not be published. Required fields are marked *</p>                   <div id="form">
-                        <div class="row">
-                            <div>
-                                <form action="" method="POST" id="commentform">
-                                    <div id="comment-name" class="form-row">
-                                        <input type="text" placeholder="Name" name="dname" id="name" required>
-                                    </div>
-                                    <div id="comment-email" class="form-row">
-                                        <input type="email" placeholder="example@example.com (will not be published)" name="demail" id="email" required>
-                                    </div>
-                                    <div id="comment-message" class="form-row">
-                                        <textarea name="commentform" placeholder="Mesasge to Blade Doctor" id="comment"></textarea>
-                                    </div>
-                                    <a href="#"><input type="submit" name="dsubmit" id="commentSubmit" value="Submit Comment"></a>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            </br>
-
             <div class="row">
-                <div id="pageone" class="col-sm-12 ">
-                    <h1>SirVic: Gold coins and diamonds exhange</h1>
+                <div id="pageone" class="col-sm-8 col-sm-offset-2">
+                    <h1 class="Sections">SirVic: Gold coins and diamonds exhange</h1>
                     <a href="#" id="pop">
                         <img id ="imageresource" src="images/SirVic.jpg" alt="SirVic advert" style="width:200px;">
                     </a>
-                    <p>Click the image to enlarge</p>
+                    <p class="large_paragraph">Click the image to enlarge</p>
                     <p>Email: sirvictradingandprojects@gmail.com</p>
                     <p>Office Address: 289 Moreleta street, Mercury complex, Silverton, Pretoria</p>
 
@@ -237,7 +227,7 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                    <h4 class="modal-title" id="myModalLabel">Image preview</h4>
+                                    <h4 class="small_sections modal-title" id="myModalLabel">Image preview</h4>
                                 </div>
                                 <div class="modal-body">
                                     <img src="" id="imagepreview" style="width: 550px; height: 800px;" >
@@ -253,6 +243,27 @@
                         $('#imagepreview').attr('src', $('#imageresource').attr('src')); 
                         $('#imagemodal').modal('show');});
                     </script>
+                </div>
+            </div>
+
+             <div id="commentOuter" class="container">
+                <div id="commentBox" class="comment-box">
+                    <div class="comment-form">
+                        <div class="header"><h1 class="Sections">Add Your Comment</h1></div>
+                            <form action="#" onsubmit="event.preventDefault(); postComment()">
+                                <div> 
+                                    <input type="text" id="name" placeholder="Name"/>
+                                </div>
+                                <div>
+                                    <textarea id="comment" rows="3" cols="20" placeholder="Comment"></textarea>
+                                </div>
+                                <button type="submit">Comment</button>
+                            </form>  
+                    </div>
+                    <div class="text-center">
+                        <h4 class="small_sections">Comments</h4>
+                        <div id="comments"></div>
+                    </div>
                 </div>
             </div>
         </div>
