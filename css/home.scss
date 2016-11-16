@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,600);
 
 body{  
-  background-color: black; /* #403D3D;*/
+  background-color:  #262626;//#403D3D;
   color: white;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -13,26 +13,36 @@ body{
   background-color:transparent;
   padding: 0px;
 }
+
 #jumboh1{
-  color: red; /*#D90F0F*/
+  color: #D90F0F;
+  font-size: 80px;
+  font-weight: bold;
+  font-family: 'XoloniumRegular', 'Times New Roman', Times, serif;
 }
 
 #jumboh4{
   color: yellow;
+  font-weight: bold;
+  font-family: 'XoloniumRegular', 'Times New Roman', Times, serif;
 }
 
 #flag {
   width:200px; 
   height: 160px; 
+  border-radius: 25px;
 }
 
 .b_a_img{
-  width: 200px; 
-  height:200px;
+  width: 300px; 
+  height:250px;
+  border-radius: 25px;
+  display: block;
+  margin: auto;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
 }
 
 .b_a_a, .b_a_d{
-  float: left;
   background-color:transparent; /*important*/
   padding: 10px;
   color: white;
@@ -43,7 +53,11 @@ body{
 }
 
 .Sections{
-  text-decoration: underline;
+ // text-decoration: underline;
+  font-weight: bold;
+  font-family: 'XoloniumRegular', 'Times New Roman', Times, serif;
+  color: red;
+  text-shadow: 2px 2px 5px #0D0D0D;
 }
 
 /*comment box scsss*/
