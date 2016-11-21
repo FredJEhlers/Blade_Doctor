@@ -1,0 +1,162 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,600);
+
+body{  
+  position: relative !important;
+  background-color:  #262626; /*#403D3D;*/
+  color: white;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-top: 70px;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+#baModals {
+  padding-top: 200px;
+}
+
+#jumboDiv{
+  background-color:transparent;
+  padding: 0px;
+  position: relative;
+}
+
+#jumboh1{
+  color: #D90F0F;
+  font-size: 80px;
+  font-weight: bold;
+  font-family: 'XoloniumRegular', 'Times New Roman', Times, serif;
+  text-shadow: 2px 2px 5px #0D0D0D;
+}
+
+#jumboh4{
+  color: yellow;
+  font-weight: bold;
+  font-family: 'XoloniumRegular', 'Times New Roman', Times, serif;
+}
+
+#flag {
+  width:200px; 
+  height: 160px; 
+  border-radius: 25px;
+}
+
+.b_a_img{
+  width: 300px; 
+  height:250px;
+  border-radius: 25px;
+  display: block;
+  margin: auto;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+}
+
+.b_a_a, .b_a_d{
+  background-color:transparent; /*important*/
+  padding: 10px;
+  color: white;
+}
+
+.small_sections, .large_paragraph{
+  padding: 10px;
+}
+
+.Sections{
+  font-weight: bold;
+  font-family: 'XoloniumRegular', 'Times New Roman', Times, serif;
+  color: #D90F0F;
+  text-shadow: 2px 2px 5px #0D0D0D;
+  padding-top: 70px;
+}
+
+.boxes{
+  border-radius: 25px;
+}
+
+/*comment box css*/
+
+span{
+  float: right;
+  margin-right: 10px;
+  font-size: 12px;
+  font-weight: 300;
+}  
+
+hr{
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#commentOuter{
+  display: flex;
+  justify-content: center;
+}
+
+#commentBox{
+  width: 85%;
+  margin-top: 10px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+p.comments{
+  margin: 0 30px 15px;
+  color: #333;
+  word-wrap: break-word;
+  background: #EEE;
+  padding: 5px 10px;
+}
+
+.header{
+  margin: 15px 20px;
+}
+
+form{
+  margin: 10px 10px 30px 10px; 
+  color: #CCC;
+}
+
+input[type="text"], textarea{
+  margin: 5px 10px;
+  outline: none;
+  background: #efefef;
+  border: 0;
+  padding: 10px;
+}
+
+textarea{
+  resize: none;
+  width: 50%;
+  color: black;
+  
+}
+
+input[type="text"]{
+  width: 50%;
+  margin-bottom: 15px;
+  color: black;
+  
+}
+
+button{
+  margin: 12px 0 0 10px;
+  border: 0;
+  color: #fff;
+  background: #D90F0F;
+  padding: 12px 20px 12px 20px;
+  text-decoration: none;
+  transition: all .2s ease;
+}

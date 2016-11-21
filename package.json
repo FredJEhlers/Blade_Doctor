@@ -1,0 +1,27 @@
+{
+  "name": "firebase",
+  "version": "3.6.1",
+  "description": "Firebase database",
+  "main": "js/javascript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FredJEhlers/Blade_Doctor.git"
+  },
+  "keywords": [
+    "firebase",
+    "database",
+    "comments"
+  ],
+  "author": "Frederick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FredJEhlers/Blade_Doctor/issues"
+  },
+  "homepage": "https://github.com/FredJEhlers/Blade_Doctor#readme",
+  "dependencies": {
+    "firebase-admin": "^4.0.2"
+  }
+}
