@@ -1,14 +1,4 @@
-var firebase = require('firebase/app');
-var admin = require("firebase-admin");
-
-var serviceAccount = require("blade-doctor-firebase-adminsdk-c5paw-d636de2029.json");
-
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://blade-doctor.firebaseio.com"
-});
-
-
+var ref = new Firebase("https://blade-doctor.firebaseio.com");
 // Thanks to https://gist.github.com/hurjas/2660489#file-timestamp-js-L26
 function timeStamp() {
   var now = new Date();
