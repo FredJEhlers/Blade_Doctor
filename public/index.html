@@ -5,31 +5,38 @@
         <meta http-equiv="X UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title> Blade Doctor </title>
-        <link href="css/bootstrap.min.css" rel="stylesheet"> 
-        <link href="css/home.css" rel="stylesheet">
-        <!-- custom font -->
-        <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/xolonium" type="text/css"/>
-        <script src="js/jquery-3.1.1.js"></script>
-        <script src="js/bootstrap.js"></script>    
-        <script src="js/index.js"></script> 
-        <script src="js/require.js"></script>
-        <!-- firbase info 
-            <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
-            <script>
-            // Initialize Firebase
+        <!-- custom font used according to client preference -->
+        <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/xolonium" type="text/css"/> 
+        
+        <!-- firebase web app link start -->
+        <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+        <script>
+        // Initialize Firebase
             var config = {
-                apiKey: "AIzaSyDWqfDxT_fRYnM5eN7MHsSgjxmQaxbLsPo",
-                authDomain: "blade-doctor.firebaseapp.com",
-                databaseURL: "https://blade-doctor.firebaseio.com",
-                storageBucket: "blade-doctor.appspot.com",
-                messagingSenderId: "150085776216"
-            };
-            firebase.initializeApp(config);
-            </script>
-        <!-- end of firebase info -->
+            apiKey: "AIzaSyDWqfDxT_fRYnM5eN7MHsSgjxmQaxbLsPo",
+            authDomain: "blade-doctor.firebaseapp.com",
+            databaseURL: "https://blade-doctor.firebaseio.com",
+            storageBucket: "blade-doctor.appspot.com",
+            messagingSenderId: "150085776216"
+        };
+        firebase.initializeApp(config);
+        </script>
+        <!-- firebase web app link end -->
+        
+        <!-- bootstrap and jquery script tags start --> 
+        <script type='text/javascript' src="js/jquery-3.1.1.js"></script>
+        <script type='text/javascript' src="js/bootstrap.js"></script> 
+        <link href="css/bootstrap.css" rel="stylesheet"> 
+
+        <!-- custom js file to implement firebase -->
+        <script type='text/javascript' src="js/index.js"></script> 
+
+        <!-- custom css file -->
+        <link href="css/home.css" rel="stylesheet">
     </head>
 
     <body>
+        <!-- Start: Menu navbar for ease of access for the user -->
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -68,6 +75,8 @@
                 </div>
             </div>
         </nav>
+        <!-- End Navbar menu -->
+        <!-- Start Jumbotron (header) -->
         <div id="jumboDiv" class="jumbotron text-center container-fluid">
             <div class="row">
                 <div class="col-sm-4">
@@ -81,6 +90,8 @@
                 </div>
             </div>
         </div>
+        <!-- End Jumbotron -->
+        <!-- Start section ABout us -->
         <div class="container text-center">
             <div class="row col-sm-8 center col-sm-offset-2">
                 <h1 id="aboutus" class="Sections">About us</h1>
@@ -118,6 +129,8 @@
                 <p class="large_paragraph">We have been in the Blade-sharpening industry for 11 years and we are professionals, as we are 
                     utlising German Machinery!</p>
             </div>
+            <!-- End About us -->
+            <!-- Start Types of blades section with table and pricing -->
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2">
                     <h1 id="types" class="Sections">Types of Blades and Prices</h3>
@@ -191,7 +204,8 @@
                     <p class="text-uppercase">Contracts can be setup for businesses for future services and discounts!</strong></p>
                 </div>
             </div>
-
+            <!-- End of Types of blades -->
+            <!-- Start Before and after images with bootstrap modal -->
             <div class="container">
                 <h1 id="beforeAfter" class="Sections">Before and after pictures</h1>                
                 <div class="row">
@@ -227,7 +241,7 @@
                     </div>
                 </div><p class="large_paragraph">Click on images to view full picture</p>
             </div>
-
+            <!-- Modal div used for the before and after images -->
              <div class="modal fade col-sm-8 col-sm-offset-2" id="previewModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div id="baModals col-sm-8" class="modal-body">
@@ -238,6 +252,8 @@
                     </div>
                 </div>
             </div>
+            <!-- End modal div -->
+            <!-- Start scripts to make modal images work -->
             <script>$("#bKnifePop").on("click", function() {
                 $('#imagepreview').attr('src', $('#bKnife').attr('src')); 
                 $('#previewModal').modal('show');});
@@ -257,7 +273,9 @@
                 $('#imagepreview').attr('src', $('#aBay').attr('src')); 
                 $('#previewModal').modal('show');});
             </script>
-
+            <!-- End scripts for modals -->
+            <!-- End Before and after -->
+            <!-- Start Section product and training -->
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2">
                     <h1 id="training" class="Sections">Sharpening Machinery Product and Training</strong></h1> 
@@ -267,7 +285,8 @@
                     <p class="large_paragraph">(Deposit of R1500 REQUIRED)</p>
                 </div>
             </div>
-        
+            <!-- End section -->
+            <!-- Start Section Contact -->
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2">
                     <h1 id="contact" class="Sections">Contact</h1>
@@ -279,7 +298,8 @@
                     <p>Business proposal are ready to be discussed</p>
                 </div>
             </div>
-
+            <!-- End section -->
+            <!-- Start Section Sponsored advert with modal-->
             <div class="row">
                 <div id="pageone" class="col-sm-8 col-sm-offset-2">
                     <h4 id="sirVic" class="Sections">SirVic: Gold coins and diamonds exhange</h4>
@@ -304,7 +324,8 @@
                     </script>
                 </div>
             </div>
-
+            <!-- End section -->
+            <!-- Start commenting section, Will use firebase here -->
              <div id="commentOuter" class="container col-sm-8 col-sm-offset-2">
                 <div id="commentBox" class="comment-box">
                     <div class="comment-form">
@@ -325,6 +346,7 @@
                     </div>
                 </div>
             </div>
+            <!-- End section -->
         </div>
     </body>
 </html>

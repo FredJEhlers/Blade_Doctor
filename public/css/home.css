@@ -11,6 +11,7 @@ body{
   padding-top: 70px;
 }
 
+/* CSS for anything related to modals */
 #baModals {
   vertical-align: middle;
 }
@@ -29,6 +30,8 @@ body{
   vertical-align: middle;
 }
 
+/* End of modal CSS */
+/* Jumbo header CSS */
 #jumboDiv{
   background-color:transparent;
   padding: 0px;
@@ -48,7 +51,8 @@ body{
   font-weight: bold;
   font-family: 'XoloniumRegular', 'Times New Roman', Times, serif;
 }
-
+/* End Jumbo header css */
+/* All Images and their respective CSS */
 #flag {
   width:200px; 
   height: 160px; 
@@ -69,7 +73,8 @@ body{
   padding: 10px;
   color: white;
 }
-
+/* End of images CSS */
+/* All text on webapage CSS */
 .small_sections, .large_paragraph{
   padding: 10px;
 }
@@ -81,12 +86,8 @@ body{
   text-shadow: 2px 2px 5px #0D0D0D;
   padding-top: 70px;
 }
-
-.boxes{
-  border-radius: 25px;
-}
-
-/*comment box css*/
+/*End of text CSS*/
+/*Comment box CSS*/
 
 span{
   float: right;
@@ -164,3 +165,8 @@ button{
   text-decoration: none;
   transition: all .2s ease;
 }
+
+.boxes{
+  border-radius: 25px;
+}
+/* END of comment box CSS */
