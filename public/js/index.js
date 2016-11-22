@@ -1,4 +1,4 @@
-var firebase = require('firebase/app');
+/*var firebase = require('firebase/app');
 var admin = require("firebase-admin");
 
 var serviceAccount = require("blade-doctor-firebase-adminsdk-c5paw-d636de2029.json");
@@ -52,3 +52,4 @@ function addComment(name, comment, timeStamp) {
   var comments = document.getElementById("comments");
   comments.innerHTML = "<hr><h4>" + name + " says<span>" + timeStamp + "</span></h4><p class='comments'>" + comment + "</p>" + comments.innerHTML;
 }
+*/

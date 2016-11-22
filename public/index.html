@@ -9,11 +9,11 @@
         <link href="css/home.css" rel="stylesheet">
         <!-- custom font -->
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/xolonium" type="text/css"/>
-        <script src="js/require.js"></script>
         <script src="js/jquery-3.1.1.js"></script>
+        <script src="js/bootstrap.js"></script>    
         <script src="js/index.js"></script> 
-        <script src="js/bootstrap.min.js"></script>
-        <!-- firbase info -->
+        <script src="js/require.js"></script>
+        <!-- firbase info 
             <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
             <script>
             // Initialize Firebase
@@ -37,22 +37,33 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="#">Blade Doctor</a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#aboutus">About Us</a></li>
-                        <li><a href="#types">Blades and Prices</a></li>
-                        <li><a href="#beforeAfter">Before and After</a></li>
-                        <li><a href="#training">Sharpening Training</a></li>
-                        <li><a href="#contact">Contact</a></li>  
-                        <li><a href="#sirVic">SirVic</a></li>
-                        <li><a href="#addComment">Comments</a></li>         
+                        <li class="dropdown">
+                            <a class="dropdown-toggle " data-toggle="dropdown" href="#">Prices and Pictures<span class="caret"></span></a>
+                            <ul class="dropdown-menu navbar-inverse">
+                                <li><a href="#types" style="color: white;">Blades and Prices</a></li>
+                                <li><a href="#beforeAfter" style="color: white;">Before and After</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact and Training<span class="caret"></span></a>
+                            <ul class="dropdown-menu navbar-inverse">
+                                <li><a href="#training" style="color: white;">Sharpening Training</a></li>
+                                <li><a href="#contact" style="color: white;">Contact</a></li>  
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Comments and Sponsor<span class="caret"></span></a>
+                            <ul class="dropdown-menu navbar-inverse">
+                                <li><a href="#sirVic" style="color: white;">SirVic</a></li>
+                                <li><a href="#addComment" style="color: white;">Comments</a></li>  
+                            </ul>
+                        </li>   
                     </ul>
                 </div>
             </div>
