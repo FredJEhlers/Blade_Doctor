@@ -11,7 +11,7 @@
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/xolonium" type="text/css"/>
         <script src="js/require.js"></script>
         <script src="js/jquery-3.1.1.js"></script>
-        <script src="js/javascript.js"></script> 
+        <script src="js/index.js"></script> 
         <script src="js/bootstrap.min.js"></script>
         <!-- firbase info -->
             <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
@@ -29,7 +29,7 @@
         <!-- end of firebase info -->
     </head>
 
-    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <body>
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -44,18 +44,16 @@
                     </button>
                     <a class="navbar-brand" href="#">Blade Doctor</a>
                 </div>
-                <div>
-                    <div class="collapse navbar-collapse" id="myNavbar">
-                        <ul class="nav navbar-nav">
-                            <li><a href="#aboutus">About Us</a></li>
-                            <li><a href="#types">Blades and Prices</a></li>
-                            <li><a href="#beforeAfter">Before and After</a></li>
-                            <li><a href="#training">Sharpening Training</a></li>
-                            <li><a href="#contact">Contact</a></li>  
-                            <li><a href="#sirVic">SirVic</a></li>
-                            <li><a href="#addComment">Comments</a></li>         
-                        </ul>
-                    </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#aboutus">About Us</a></li>
+                        <li><a href="#types">Blades and Prices</a></li>
+                        <li><a href="#beforeAfter">Before and After</a></li>
+                        <li><a href="#training">Sharpening Training</a></li>
+                        <li><a href="#contact">Contact</a></li>  
+                        <li><a href="#sirVic">SirVic</a></li>
+                        <li><a href="#addComment">Comments</a></li>         
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -65,7 +63,7 @@
                 </div>
                 <div class="col-sm-4">
                     <h1 id="jumboh1">Blade Doctor</h1>
-                    <h4 class="Sections" id="jumboh4">Professional German Blade-Sharpeing Service</h5>
+                    <h4 class="Sections" id="jumboh4">Professional German Blade-Sharpening Service</h5>
                 </div>
                 <div class="col-sm-4"> 
                     <img id="flag" src="images/Flag_of_germany.jpg" alt = "German flag">
@@ -194,7 +192,7 @@
                             </a>
                         </div>
                         <div class="col-sm-6 b_a_d ">
-                            <a href="#afterKnife" class="b_a_a" id="aKnifePop">
+                            <a href="#beforeAfter" class="b_a_a" id="aKnifePop">
                                 <p class="large_paragraph">After: a knife</p>
                                 <img id="aKnife" src="images/knife_after.jpg" alt="knife after" class ="b_a_img">
                             </a>
@@ -219,62 +217,39 @@
                 </div><p class="large_paragraph">Click on images to view full picture</p>
             </div>
 
-             <div class="modal fade" id="bKnifeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+             <div class="modal fade col-sm-8 col-sm-offset-2" id="previewModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
-                    <div id="baModals" class="modal-body">
-                        <img src="" id="beforeKnife" style="width: 700px; height: 500px;" >
+                    <div id="baModals col-sm-8" class="modal-body">
+                        <img src="" id="imagepreview" style="width: 100%;" >
+                    </div>
+                    <div class="modal-footer text-center">
+                        <button type="button" class="btn btn-default center-block" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
-            
-            <div class="modal fade" id="aKnifeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div id="baModals" class="modal-body">
-                        <img src="" id="afterKnife" style="width: 700px; height: 500px;" >
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal fade" id="bBayModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div id="baModals" class="modal-body">
-                        <img src="" id="beforeBay" style="width: 700px; height: 500px;" >
-                    </div>
-                </div>
-            </div>
-            
-            <div class="modal fade" id="aBayModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div id="baModals" class="modal-body">
-                        <img src="" id="afterBay" style="width: 700px; height: 500px;" >
-                    </div>
-                </div>
-            </div>
-            
             <script>$("#bKnifePop").on("click", function() {
-                $('#beforeKnife').attr('src', $('#bKnife').attr('src')); 
-                $('#bKnifeModal').modal('show');});
-            </script>
-
+                $('#imagepreview').attr('src', $('#bKnife').attr('src')); 
+                $('#previewModal').modal('show');});
+            </script>            
+            
             <script>$("#aKnifePop").on("click", function() {
-                $('#afterKnife').attr('src', $('#aKnife').attr('src')); 
-                $('#aKnifeModal').modal('show');});
+                $('#imagepreview').attr('src', $('#aKnife').attr('src')); 
+                $('#previewModal').modal('show');});
             </script>
-
+            
             <script>$("#bBayPop").on("click", function() {
-                $('#beforeBay').attr('src', $('#bBay').attr('src')); 
-                $('#bBayModal').modal('show');});
-            </script>
-
-            <script>$("#aKnifePop").on("click", function() {
-                $('#afterBay').attr('src', $('#aBay').attr('src')); 
-                $('#aBayModal').modal('show');});
+                $('#imagepreview').attr('src', $('#bBay').attr('src')); 
+                $('#previewModal').modal('show');});
+            </script>          
+            
+            <script>$("#aBayPop").on("click", function() {
+                $('#imagepreview').attr('src', $('#aBay').attr('src')); 
+                $('#previewModal').modal('show');});
             </script>
 
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2">
                     <h1 id="training" class="Sections">Sharpening Machinery Product and Training</strong></h1> 
-                    <h4 class="small_sections">Details of training</h4>
                     <p class="large_paragraph">Sharpening Machinery and training (1 day)</br>
                                                 *Product sale and training included for:</p>
                     <p class="text-uppercase">R8500</strong></p>
@@ -288,6 +263,7 @@
                     <p>Roeland Hain CEO and Founder</p>
                     <p>072 258 8890 (call or whatsapp)</p>
                     <p>email: knivedoctor@gmail.com</p>
+                    <img class="b_a_img" src="images/Roeland.jpg" alt="CEO profile image" style="width:200px;">
                     <p>Interested to sponsor Blade Doctor and become business partners of the company are welcome.</p>
                     <p>Business proposal are ready to be discussed</p>
                 </div>
@@ -318,7 +294,7 @@
                 </div>
             </div>
 
-             <div id="commentOuter" class="container">
+             <div id="commentOuter" class="container col-sm-8 col-sm-offset-2">
                 <div id="commentBox" class="comment-box">
                     <div class="comment-form">
                         <div class="header"><h1 id="addComment" class="Sections">Add Your Comment</h1></div>

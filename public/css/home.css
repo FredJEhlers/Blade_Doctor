@@ -2,7 +2,7 @@
 
 body{  
   position: relative !important;
-  background-color:  #262626; /*#403D3D;*/
+  background-color:  black;
   color: white;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -11,18 +11,22 @@ body{
   padding-top: 70px;
 }
 
-.navbar .navbar-nav {
-  display: inline-block;
-  float: none;
-  vertical-align: top;
-}
-
-.navbar .navbar-collapse {
-  text-align: center;
-}
-
 #baModals {
-  padding-top: 200px;
+  vertical-align: middle;
+}
+
+#previewModal{
+  height: 80%;
+} 
+
+.modal-footer{
+  border: none;
+}
+
+.modal-body {
+  height: 80%;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 #jumboDiv{
@@ -135,6 +139,7 @@ input[type="text"], textarea{
   background: #efefef;
   border: 0;
   padding: 10px;
+  width: 100% !important; 
 }
 
 textarea{
@@ -148,7 +153,6 @@ input[type="text"]{
   width: 50%;
   margin-bottom: 15px;
   color: black;
-  
 }
 
 button{

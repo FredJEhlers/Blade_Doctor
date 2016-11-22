@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/FredJEhlers/Blade_Doctor#readme",
   "dependencies": {
-    "firebase-admin": "^4.0.2"
+    "firebase-admin": "^4.0.2",
+    "requirejs": "^2.3.2"
   }
 }
