@@ -31,6 +31,18 @@ body{
 }
 
 /* End of modal CSS */
+/* start of menu CSS */
+.menu{
+  color: white !important;
+}
+.menu:hover{
+  color: red !important;
+}
+
+#homeMenu{
+  color: red;
+}
+/* End of menu CSS
 /* Jumbo header CSS */
 #jumboDiv{
   background-color:transparent;
@@ -134,26 +146,23 @@ form{
   color: #CCC;
 }
 
-input[type="text"], textarea{
+input[type="text"], input[type="email"], textarea{
   margin: 5px 10px;
   outline: none;
-  background: #efefef;
+  background: white;
   border: 0;
   padding: 10px;
   width: 100% !important; 
+  border-radius: 45px;
+  color: black;
 }
 
 textarea{
   resize: none;
-  width: 50%;
-  color: black;
-  
 }
 
 input[type="text"]{
-  width: 50%;
   margin-bottom: 15px;
-  color: black;
 }
 
 button{
@@ -164,9 +173,5 @@ button{
   padding: 12px 20px 12px 20px;
   text-decoration: none;
   transition: all .2s ease;
-}
-
-.boxes{
-  border-radius: 25px;
 }
 /* END of comment box CSS */

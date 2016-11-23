@@ -4,6 +4,10 @@
         <meta charset="utf-8">
         <meta http-equiv="X UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Blade Sharpening and training">
+        <meta name="keywords" content="blades, sharpened, sharpening, knives, knife, swords, equipment, training">
+        <meta name="author" content="Frederick Ehlers">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <title> Blade Doctor </title>
         <!-- custom font used according to client preference -->
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/xolonium" type="text/css"/> 
@@ -29,12 +33,12 @@
         <!-- firebase web app link end -->
         
         <!-- bootstrap and jquery script tags start --> 
-        <script type='text/javascript' src="js/jquery-3.1.1.js"></script>
-        <script type='text/javascript' src="js/bootstrap.js"></script> 
+        <script src="js/jquery-3.1.1.js"></script>
+        <script src="js/bootstrap.js"></script> 
         <link href="css/bootstrap.css" rel="stylesheet"> 
 
         <!-- custom js file to implement firebase -->
-        <script type='text/javascript' src="js/index.js"></script> 
+        <script src="js/index.js"></script> 
 
         <!-- custom css file -->
         <link href="css/home.css" rel="stylesheet">
@@ -50,30 +54,30 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Blade Doctor</a>
+                    <a id="homeMenu" class="navbar-brand" href="#">Blade Doctor</a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#aboutus">About Us</a></li>
+                        <li class="active"><a class="menu" href="#aboutus">About Us</a></li>
                         <li class="dropdown">
-                            <a class="dropdown-toggle " data-toggle="dropdown" href="#">Prices and Pictures<span class="caret"></span></a>
+                            <a class="dropdown-toggle menu" data-toggle="dropdown" href="#">Prices and Pictures<span class="caret"></span></a>
                             <ul class="dropdown-menu navbar-inverse">
-                                <li><a href="#types" style="color: white;">Blades and Prices</a></li>
-                                <li><a href="#beforeAfter" style="color: white;">Before and After</a></li>
+                                <li><a class="menu" href="#types" >Blades and Prices</a></li>
+                                <li><a class="menu" href="#beforeAfter" >Before and After</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact and Training<span class="caret"></span></a>
+                            <a class="dropdown-toggle menu" data-toggle="dropdown" href="#">Contact and Training<span class="caret"></span></a>
                             <ul class="dropdown-menu navbar-inverse">
-                                <li><a href="#training" style="color: white;">Sharpening Training</a></li>
-                                <li><a href="#contact" style="color: white;">Contact</a></li>  
+                                <li><a class="menu" href="#training" >Sharpening Training</a></li>
+                                <li><a class="menu" href="#contact" >Contact</a></li>  
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Comments and Sponsor<span class="caret"></span></a>
+                            <a class="dropdown-toggle menu" data-toggle="dropdown" href="#">Comments and Sponsor<span class="caret"></span></a>
                             <ul class="dropdown-menu navbar-inverse">
-                                <li><a href="#sirVic" style="color: white;">SirVic</a></li>
-                                <li><a href="#addComment" style="color: white;">Comments</a></li>  
+                                <li><a class="menu" href="#sirVic" style="color: white;">SirVic</a></li>
+                                <li><a class="menu" href="#addComment" style="color: white;">Comments</a></li>  
                             </ul>
                         </li>   
                     </ul>
@@ -308,24 +312,26 @@
             <div class="row">
                 <div id="pageone" class="col-sm-8 col-sm-offset-2">
                     <h4 id="sirVic" class="Sections">SirVic: Gold coins and diamonds exhange</h4>
-                    <a href="#sirVic" id="pop">
-                        <img class="b_a_img" id="imageresource" src="images/SirVic.jpg" alt="SirVic advert" style="width:200px;">
+                    <a href="#sirVic" id="sirVicPop">
+                        <img class="b_a_img" id="sirVicAd" src="images/SirVic.jpg" alt="SirVic advert" style="width:200px;">
                          <p class="large_paragraph">Click to Enlarge</p>
                     </a>
                     <p>Email: sirvictradingandprojects@gmail.com</p>
                     <p>Office Address: 289 Moreleta street, Mercury complex, Silverton, Pretoria</p>
 
-                    <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal fade col-sm-8 col-sm-offset-2" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
-                            <div class="modal-body">
-                                <img src="" id="imagepreview" style="width: 550px; height: 800px;" >
+                            <div id="baModals col-sm-8" class="modal-body">
+                                <img src="" id="vicpreview" style="width: 100%;" >
+                            </div>
+                            <div class="modal-footer text-center">
+                                <button type="button" class="btn btn-default center-block" data-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
-
-                    <script>$("#pop").on("click", function() {
-                        $('#imagepreview').attr('src', $('#imageresource').attr('src')); 
-                        $('#imagemodal').modal('show');});
+                    <script>$("#sirVicPop").on("click", function() {
+                        $('#vicpreview').attr('src', $('#sirVicAd').attr('src')); 
+                        $('#modal').modal('show');});
                     </script>
                 </div>
             </div>
@@ -335,12 +341,19 @@
                 <div id="commentBox" class="comment-box">
                     <div class="comment-form">
                         <div class="header"><h1 id="addComment" class="Sections">Add Your Comment</h1></div>
-                            <form action="#" onsubmit="event.preventDefault(); postComment()">
+                            <form action="#" onsubmit="postComment()">
                                 <div> 
-                                    <input class="boxes" type="text" id="name" placeholder="Name"/>
+                                    <input type="text" id="name" placeholder="Name"/>
                                 </div>
                                 <div>
-                                    <textarea class="boxes" id="comment" rows="3" cols="20" placeholder="Comment"></textarea>
+                                    <textarea id="comment" rows="3" cols="20" placeholder="Comment"></textarea>
+                                </div>
+                                <div>
+                                    <p>Would you like to be contacted personally via email?</p>
+                                    <p>Your email address will be kept private</p>
+                                    <input  type="checkbox" id="contactMe" style="color: white;"onclick="enableEmail(this.checked)"/> Yes contact me via email </br>
+                                    <p>Your email address: </p>
+                                    <input type="email" id="userEmail" placeholder="example@example.com" disabled/>
                                 </div>
                                 <button class="boxes" type="submit">Comment</button>
                             </form>  

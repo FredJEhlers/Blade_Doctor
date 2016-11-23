@@ -1,3 +1,7 @@
+function enableEmail(bEnable){
+  document.getElementById('userEmail').disabled = !bEnable;
+}
+
 var ref = new Firebase("https://blade-doctor.firebaseio.com");
 // Thanks to https://gist.github.com/hurjas/2660489#file-timestamp-js-L26
 function timeStamp() {
@@ -19,26 +23,41 @@ function timeStamp() {
 function postComment() {
   var name = document.getElementById("name").value,
       comment = document.getElementById("comment").value,
+      chk = document.getElementById("contactMe").checked,
+      email = document.getElementById("userEmail").value,
       time = timeStamp();
+  
 
-  if (name && comment) {
+
+  if (chk && name && comment){
+    alert("want to push email");
+    ref.push({
+      name: name,
+      comment: comment,
+      time: time,
+      email: email
+    });
+  }
+  else if (!chk){
     ref.push({
       name: name,
       comment: comment,
       time: time
-    });
+    })
   }
 
   document.getElementById("name").value = '';
   document.getElementById("comment").value = '';
+  document.getElementById("contactMe").checked = false;
+  document.getElementById("userEmail").value = '';
 }
 
 ref.on("child_added", function(snapshot) {
   var comment = snapshot.val();
-  addComment(comment.name, comment.comment, comment.time);
+  addComment(comment.name, comment.comment, comment.time, comment.email);
 });
 
-function addComment(name, comment, timeStamp) {
+function addComment(name, comment, timeStamp, email) {
   var comments = document.getElementById("comments");
   comments.innerHTML = "<hr><h4>" + name + " says<span>" + timeStamp + "</span></h4><p class='comments'>" + comment + "</p>" + comments.innerHTML;
 }
