@@ -31,32 +31,30 @@
         firebase.initializeApp(config);
         </script>
         <!-- firebase web app link end -->
-        
-        <!-- bootstrap and jquery script tags start --> 
+        <!-- bootstrap and jquery script tags start  -->
         <script src="js/jquery-3.1.1.js"></script>
         <script src="js/bootstrap.js"></script> 
         <link href="css/bootstrap.css" rel="stylesheet"> 
-
         <!-- custom js file to implement firebase -->
         <script src="js/index.js"></script> 
-
         <!-- custom css file -->
         <link href="css/home.css" rel="stylesheet">
     </head>
 
     <body>
+    <div id="wrapper">
         <!-- Start: Menu navbar for ease of access for the user -->
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
                     <a id="homeMenu" class="navbar-brand" href="#">Blade Doctor</a>
                 </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
+                <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a class="menu" href="#aboutus">About Us</a></li>
                         <li class="dropdown">
@@ -138,233 +136,236 @@
                 <p class="large_paragraph">We have been in the Blade-sharpening industry for 11 years and we are professionals, as we are 
                     utlising German Machinery!</p>
             </div>
+        </div>
             <!-- End About us -->
             <!-- Start Types of blades section with table and pricing -->
-            <div class="row">
-                <div class="col-sm-8 col-sm-offset-2">
-                    <h1 id="types" class="Sections">Types of Blades and Prices</h3>
-                    <table cellpadding:"10" class="table table-responsive text-left align-center" >
-                        <thead>
-                            <tr>
-                                <th>Type of Blade</th>
-                                <th>Price</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Knife Blades</td>
-                                <td>R35 each</td>
-                            </tr>
-                            <tr>
-                                <td>Paper Scissor Blades</td>
-                                <td>R30 each</td>
-                            </tr>
-                            <tr>
-                                <td>Hair Dressing Scissor Blades</td>
-                                <td>R80 each</td>
-                            </tr>
-                            <tr>
-                                <td>Lawn-mower Blades</td>
-                                <td>R80 each</td>
-                            </tr>
-                            <tr>
-                                <td>Garden Scissor Blades</td>
-                                <td>R60 each</td>
-                            </tr>
-                            <tr>
-                                <td>Rose Scissor Blades</td>
-                                <td>R40 each</td>
-                            </tr>
-                            <tr>
-                                <td>Axe Blades</td>
-                                <td>R50 each</td>
-                            </tr>
-                            <tr>
-                                <td>Swords Blades</td>
-                                <td>R400 each</td>
-                            </tr>
-                            <tr>
-                                <td>Biltong Slicing Blades</td>
-                                <td>R150 each</td>
-                            </tr>
-                            <tr>
-                                <td>Fabric Roller Cutter Blades</td>
-                                <td>R30 each</td>
-                            </tr>
-                            <tr>
-                                <td>Pizza Roller Cutting Blades</td>
-                                <td>R30 each</td>
-                            </tr>
-                            <tr>
-                                <td>Wood Chisel Blades</td>
-                                <td>R30 each</td>
-                            </tr>
-                            <tr>
-                                <td>Polishing and Sharpening of Antique Knives/ Bayonets etc.</td>
-                                <td>R300 each</td>
-                            </tr>
-                            <tr>
-                                <td>Medical Chisels (e.g. Nose)</td>
-                                <td>R500 each</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p>Other specialised blades can be requested to be serviced and sharpened</p>
-                    <p class="text-uppercase">Contracts can be setup for businesses for future services and discounts!</strong></p>
-                </div>
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h1 id="types" class="Sections">Types of Blades and Prices</h3>
+                <table cellpadding:"10" class="table table-responsive text-left align-center" >
+                    <thead>
+                        <tr>
+                            <th>Type of Blade</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Knife Blades</td>
+                            <td>R35 each</td>
+                        </tr>
+                        <tr>
+                            <td>Paper Scissor Blades</td>
+                            <td>R30 each</td>
+                        </tr>
+                        <tr>
+                            <td>Hair Dressing Scissor Blades</td>
+                            <td>R80 each</td>
+                        </tr>
+                        <tr>
+                            <td>Lawn-mower Blades</td>
+                            <td>R80 each</td>
+                        </tr>
+                        <tr>
+                            <td>Garden Scissor Blades</td>
+                            <td>R60 each</td>
+                        </tr>
+                        <tr>
+                            <td>Rose Scissor Blades</td>
+                            <td>R40 each</td>
+                        </tr>
+                        <tr>
+                            <td>Axe Blades</td>
+                            <td>R50 each</td>
+                        </tr>
+                        <tr>
+                            <td>Swords Blades</td>
+                            <td>R400 each</td>
+                        </tr>
+                        <tr>
+                            <td>Biltong Slicing Blades</td>
+                            <td>R150 each</td>
+                        </tr>
+                        <tr>
+                            <td>Fabric Roller Cutter Blades</td>
+                            <td>R30 each</td>
+                        </tr>
+                        <tr>
+                            <td>Pizza Roller Cutting Blades</td>
+                            <td>R30 each</td>
+                        </tr>
+                        <tr>
+                            <td>Wood Chisel Blades</td>
+                            <td>R30 each</td>
+                        </tr>
+                        <tr>
+                            <td>Polishing and Sharpening of Antique Knives/ Bayonets etc.</td>
+                            <td>R300 each</td>
+                        </tr>
+                        <tr>
+                            <td>Medical Chisels (e.g. Nose)</td>
+                            <td>R500 each</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Other specialised blades can be requested to be serviced and sharpened</p>
+                <p class="text-uppercase">Contracts can be setup for businesses for future services and discounts!</strong></p>
             </div>
-            <!-- End of Types of blades -->
-            <!-- Start Before and after images with bootstrap modal -->
-            <div class="container">
-                <h1 id="beforeAfter" class="Sections">Before and after pictures</h1>                
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="col-sm-6 b_a_d ">
-                            <a href="#beforeAfter" class="b_a_a" id="bKnifePop">
-                                <p class="large_paragraph">Before: a knife</p>
-                                <img id="bKnife" src="images/knife_before.jpg" alt="knife before" class ="b_a_img" >
-                            </a>
-                        </div>
-                        <div class="col-sm-6 b_a_d ">
-                            <a href="#beforeAfter" class="b_a_a" id="aKnifePop">
-                                <p class="large_paragraph">After: a knife</p>
-                                <img id="aKnife" src="images/knife_after.jpg" alt="knife after" class ="b_a_img">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">                              
-                        <div class="col-sm-6 b_a_d">
-                            <a href="#beforeAfter" class="b_a_a" id="bBayPop">
-                                <p class="large_paragraph">Before: a bayonet</p>
-                                <img id="bBay" src="images/bayonet_before.jpg" alt="bayonet before" class ="b_a_img">
-                            </a>
-                        </div>
-                        <div class="col-sm-6 b_a_d">
-                            <a href="#beforeAfter" class="b_a_a" id="aBayPop">
-                                <p class="large_paragraph">After: a bayonet</p>
-                                <img id="aBay" src="images/bayonet_after.jpg" alt="bayonet after" class ="b_a_img">
-                            </a>
-                        </div>
-                    </div>
-                </div><p class="large_paragraph">Click on images to view full picture</p>
-            </div>
-            <!-- Modal div used for the before and after images -->
-             <div class="modal fade col-sm-8 col-sm-offset-2" id="previewModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div id="baModals col-sm-8" class="modal-body">
-                        <img src="" id="imagepreview" style="width: 100%;" >
-                    </div>
-                    <div class="modal-footer text-center">
-                        <button type="button" class="btn btn-default center-block" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-            <!-- End modal div -->
-            <!-- Start scripts to make modal images work -->
-            <script>$("#bKnifePop").on("click", function() {
-                $('#imagepreview').attr('src', $('#bKnife').attr('src')); 
-                $('#previewModal').modal('show');});
-            </script>            
-            
-            <script>$("#aKnifePop").on("click", function() {
-                $('#imagepreview').attr('src', $('#aKnife').attr('src')); 
-                $('#previewModal').modal('show');});
-            </script>
-            
-            <script>$("#bBayPop").on("click", function() {
-                $('#imagepreview').attr('src', $('#bBay').attr('src')); 
-                $('#previewModal').modal('show');});
-            </script>          
-            
-            <script>$("#aBayPop").on("click", function() {
-                $('#imagepreview').attr('src', $('#aBay').attr('src')); 
-                $('#previewModal').modal('show');});
-            </script>
-            <!-- End scripts for modals -->
-            <!-- End Before and after -->
-            <!-- Start Section product and training -->
-            <div class="row">
-                <div class="col-sm-8 col-sm-offset-2">
-                    <h1 id="training" class="Sections">Sharpening Machinery Product and Training</strong></h1> 
-                    <p class="large_paragraph">Sharpening Machinery and training (1 day)</br>
-                                                *Product sale and training included for:</p>
-                    <p class="text-uppercase">R8500</strong></p>
-                    <p class="large_paragraph">(Deposit of R1500 REQUIRED)</p>
-                </div>
-            </div>
-            <!-- End section -->
-            <!-- Start Section Contact -->
-            <div class="row">
-                <div class="col-sm-8 col-sm-offset-2">
-                    <h1 id="contact" class="Sections">Contact</h1>
-                    <p>Roeland Hain CEO and Founder</p>
-                    <p>072 258 8890 (call or whatsapp)</p>
-                    <p>email: knivedoctor@gmail.com</p>
-                    <img class="b_a_img" src="images/Roeland.jpg" alt="CEO profile image" style="width:200px;">
-                    <p>Interested to sponsor Blade Doctor and become business partners of the company are welcome.</p>
-                    <p>Business proposal are ready to be discussed</p>
-                </div>
-            </div>
-            <!-- End section -->
-            <!-- Start Section Sponsored advert with modal-->
-            <div class="row">
-                <div id="pageone" class="col-sm-8 col-sm-offset-2">
-                    <h4 id="sirVic" class="Sections">SirVic: Gold coins and diamonds exhange</h4>
-                    <a href="#sirVic" id="sirVicPop">
-                        <img class="b_a_img" id="sirVicAd" src="images/SirVic.jpg" alt="SirVic advert" style="width:200px;">
-                         <p class="large_paragraph">Click to Enlarge</p>
-                    </a>
-                    <p>Email: sirvictradingandprojects@gmail.com</p>
-                    <p>Office Address: 289 Moreleta street, Mercury complex, Silverton, Pretoria</p>
-
-                    <div class="modal fade col-sm-8 col-sm-offset-2" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div id="baModals col-sm-8" class="modal-body">
-                                <img src="" id="vicpreview" style="width: 100%;" >
-                            </div>
-                            <div class="modal-footer text-center">
-                                <button type="button" class="btn btn-default center-block" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                    <script>$("#sirVicPop").on("click", function() {
-                        $('#vicpreview').attr('src', $('#sirVicAd').attr('src')); 
-                        $('#modal').modal('show');});
-                    </script>
-                </div>
-            </div>
-            <!-- End section -->
-            <!-- Start commenting section, Will use firebase here -->
-             <div id="commentOuter" class="container col-sm-8 col-sm-offset-2">
-                <div id="commentBox" class="comment-box">
-                    <div class="comment-form">
-                        <div class="header"><h1 id="addComment" class="Sections">Add Your Comment</h1></div>
-                            <form action="#" onsubmit="postComment()">
-                                <div> 
-                                    <input type="text" id="name" placeholder="Name"/>
-                                </div>
-                                <div>
-                                    <textarea id="comment" rows="3" cols="20" placeholder="Comment"></textarea>
-                                </div>
-                                <div>
-                                    <p>Would you like to be contacted personally via email?</p>
-                                    <p>Your email address will be kept private</p>
-                                    <input  type="checkbox" id="contactMe" style="color: white;"onclick="enableEmail(this.checked)"/> Yes contact me via email </br>
-                                    <p>Your email address: </p>
-                                    <input type="email" id="userEmail" placeholder="example@example.com" disabled/>
-                                </div>
-                                <button class="boxes" type="submit">Comment</button>
-                            </form>  
-                    </div>
-                    <div class="text-center">
-                        <h1 class="Sections">Comments</h1>
-                        <div id="comments"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- End section -->
         </div>
+        <!-- End of Types of blades -->
+        <!-- Start Before and after images with bootstrap modal -->
+        <div class="container">
+            <h1 id="beforeAfter" class="Sections">Before and after pictures</h1>                
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="col-sm-6 b_a_d ">
+                        <a href="#beforeAfter" class="b_a_a" id="bKnifePop">
+                            <p class="large_paragraph">Before: a knife</p>
+                            <img id="bKnife" src="images/knife_before.jpg" alt="knife before" class ="b_a_img" >
+                        </a>
+                    </div>
+                    <div class="col-sm-6 b_a_d ">
+                        <a href="#beforeAfter" class="b_a_a" id="aKnifePop">
+                            <p class="large_paragraph">After: a knife</p>
+                            <img id="aKnife" src="images/knife_after.jpg" alt="knife after" class ="b_a_img">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">                              
+                    <div class="col-sm-6 b_a_d">
+                        <a href="#beforeAfter" class="b_a_a" id="bBayPop">
+                            <p class="large_paragraph">Before: a bayonet</p>
+                            <img id="bBay" src="images/bayonet_before.jpg" alt="bayonet before" class ="b_a_img">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 b_a_d">
+                        <a href="#beforeAfter" class="b_a_a" id="aBayPop">
+                            <p class="large_paragraph">After: a bayonet</p>
+                            <img id="aBay" src="images/bayonet_after.jpg" alt="bayonet after" class ="b_a_img">
+                        </a>
+                    </div>
+                </div>
+            </div><p class="large_paragraph">Click on images to view full picture</p>
+        </div>
+            <!-- Modal div used for the before and after images -->
+            <div class="modal fade col-sm-12 " id="previewModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div id="baModals" class="modal-body">
+                    <img src="" id="imagepreview" style="width: 100%;" >
+                </div>
+                <div class="modal-footer text-center">
+                    <button type="button" class="btn btn-default center-block" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+        <!-- End modal div -->
+        <!-- Start scripts to make modal images work -->
+        <script>$("#bKnifePop").on("click", function() {
+            $('#imagepreview').attr('src', $('#bKnife').attr('src')); 
+            $('#previewModal').modal('show');});
+        </script>            
+        
+        <script>$("#aKnifePop").on("click", function() {
+            $('#imagepreview').attr('src', $('#aKnife').attr('src')); 
+            $('#previewModal').modal('show');});
+        </script>
+        
+        <script>$("#bBayPop").on("click", function() {
+            $('#imagepreview').attr('src', $('#bBay').attr('src')); 
+            $('#previewModal').modal('show');});
+        </script>          
+        
+        <script>$("#aBayPop").on("click", function() {
+            $('#imagepreview').attr('src', $('#aBay').attr('src')); 
+            $('#previewModal').modal('show');});
+        </script>
+        <!-- End scripts for modals -->
+        <!-- End Before and after -->
+        <!-- Start Section product and training -->
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h1 id="training" class="Sections">Sharpening Machinery Product and Training</strong></h1> 
+                <p class="large_paragraph">Sharpening Machinery and training (1 day)</br>
+                                            *Product sale and training included for:</p>
+                <p class="large_paragraph">R8500</strong></p>
+                <p class="large_paragraph">(Deposit of R1500 REQUIRED)</p>
+            </div>
+        </div>
+        <!-- End section -->
+        <!-- Start Section Contact -->
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2 text-center">
+                <h1 id="contact" class="Sections">Contact</h1>
+                <p>Roeland Hain CEO and Founder</p>
+                <p>072 258 8890 (call or whatsapp)</p>
+                <p>email: knivedoctor@gmail.com</p>
+                <img class="b_a_img" src="images/Roeland.jpg" alt="CEO profile image" style="width:200px;">
+                <p>Interested to sponsor Blade Doctor and become business partners of the company are welcome.</p>
+                <p>Business proposal are ready to be discussed</p>
+            </div>
+        </div>
+        <!-- End section -->
+        <!-- Start Section Sponsored advert with modal-->
+        <div class="row">
+            <div id="pageone" class="col-sm-8 col-sm-offset-2 text-center">
+                <h4 id="sirVic" class="Sections">SirVic: Gold coins and diamonds exhange</h4>
+                <a href="#sirVic" id="sirVicPop">
+                    <img class="b_a_img" id="sirVicAd" src="images/SirVic.jpg" alt="SirVic advert" style="width:200px;">
+                        <p class="large_paragraph">Click to Enlarge</p>
+                </a>
+                <p>Email: sirvictradingandprojects@gmail.com</p>
+                <p>Office Address: 289 Moreleta street, Mercury complex, Silverton, Pretoria</p>
+
+                <div class="modal fade col-sm-12" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-body">
+                            <img src="" id="vicpreview" style="width: 100%;" >
+                        </div>
+                        <div class="modal-footer text-center">
+                            <button type="button" class="btn btn-default center-block" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+                <script>$("#sirVicPop").on("click", function() {
+                    $('#vicpreview').attr('src', $('#sirVicAd').attr('src')); 
+                    $('#modal').modal('show');});
+                </script>
+            </div>
+        </div>
+        <!-- End section -->
+        <!-- Start commenting section, Will use firebase here -->
+        <div id="commentOuter" class="container col-sm-8 col-sm-offset-2 text-center">
+            <div id="commentBox" class="comment-box">
+                <div class="comment-form">
+                    <div class="header"><h1 id="addComment" class="Sections">Add Your Comment</h1></div>
+                        <form action="#comments" onsubmit="postComment()">
+                            <div> 
+                                <input type="text" id="name" placeholder="Name" required/>
+                            </div>
+                            <div>
+                                <textarea id="comment" rows="3" cols="20" placeholder="Comment" required></textarea>
+                            </div>
+                            <div>
+                                <p>Would you like to be contacted personally via email?</p>
+                                <p>Your email address will be kept private</p>
+                                <input  type="checkbox" id="contactMe" style="color: white;"onclick="enableEmail(this.checked)"/> Yes contact me via email </br>
+                                <input type="email" id="userEmail" placeholder="example@example.com" disabled/>
+                            </div>
+                            <button id="commentButton" class="boxes" type="submit">Comment</button>
+                        </form>  
+                    </div>
+                    <div>
+                        <h1 class="Sections">Comments</h1>
+                        <div id="comments" class="text-center"></div>
+                    </div>
+                </div>
+            </div>        
+        </div>
+    </div>
+        <!-- End section -->
+        <div id="foot" class="footer col-sm-12 text-center"></div> 
+        <script>updateCount();</script>
     </body>
 </html>

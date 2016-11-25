@@ -2,6 +2,16 @@ function enableEmail(bEnable){
   document.getElementById('userEmail').disabled = !bEnable;
 }
 
+$(document).ready(function () {
+    $(document).click(function (event) {
+        var clickover = $(event.target);
+        var _opened = $(".navbar-collapse").hasClass("navbar-collapse in");
+        if (_opened === true && !clickover.hasClass("navbar-toggle")) {
+            $("button.navbar-toggle").click();
+        }
+    });
+});
+
 var ref = new Firebase("https://blade-doctor.firebaseio.com");
 // Thanks to https://gist.github.com/hurjas/2660489#file-timestamp-js-L26
 function timeStamp() {
@@ -21,29 +31,17 @@ function timeStamp() {
 }
 
 function postComment() {
-  var name = document.getElementById("name").value,
-      comment = document.getElementById("comment").value,
+  var userName = document.getElementById("name").value,
+      userComment = document.getElementById("comment").value,
       chk = document.getElementById("contactMe").checked,
-      email = document.getElementById("userEmail").value,
-      time = timeStamp();
-  
+      userEmail = document.getElementById("userEmail").value,
+      userTime = timeStamp();
 
-
-  if (chk && name && comment){
-    alert("want to push email");
-    ref.push({
-      name: name,
-      comment: comment,
-      time: time,
-      email: email
-    });
+  if (chk && userName && userComment && userEmail){
+    ref.child('Comments').push({ "Name": userName, "Commented": userComment, "Time": userTime, "Email": userEmail });
   }
   else if (!chk){
-    ref.push({
-      name: name,
-      comment: comment,
-      time: time
-    })
+    ref.child('Comments').push({ "Name": userName, "Commented": userComment, "Time": userTime});
   }
 
   document.getElementById("name").value = '';
@@ -52,12 +50,29 @@ function postComment() {
   document.getElementById("userEmail").value = '';
 }
 
-ref.on("child_added", function(snapshot) {
-  var comment = snapshot.val();
-  addComment(comment.name, comment.comment, comment.time, comment.email);
-});
+var query = firebase.database().ref("Comments").orderByKey();
+query.on("child_added", function(snapshot) {
+      var childData = snapshot.val();
+      addComment(childData.Name, childData.Commented, childData.Time);
+  });
 
-function addComment(name, comment, timeStamp, email) {
+function addComment(name, comment, timeStamp) {
   var comments = document.getElementById("comments");
-  comments.innerHTML = "<hr><h4>" + name + " says<span>" + timeStamp + "</span></h4><p class='comments'>" + comment + "</p>" + comments.innerHTML;
+  comments.innerHTML = "<hr><h4 id='hcomments'>" + name + " said on the:  <span class='commentSpan'>" + timeStamp + "</span></h4><p class='comments'>" + comment + "</p>" + comments.innerHTML;
+}
+
+function updateCount(){
+  var query = firebase.database().ref("Visitor");
+  query.on("child_added", function(snapshot){
+  var childData = snapshot.val();
+    console.log("Count: " + childData.Count)
+    var intVal = parseInt(childData.Count,10);
+    intVal = intVal + 1;
+
+   ref.child('Visitor').child('Counter').set({ "Count": intVal});
+
+    var node = document.getElementById("foot");
+    node.innerHTML = "<p class='large_paragraph'> Number of page visits: " + intVal + "</p>" + node.innerHTML;
+    }
+  );
 }
