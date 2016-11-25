@@ -1,5 +1,5 @@
 "# Blade_Doctor" 
-This is a website that is made for a comapny that does blade sharpening.
+This is a static website that is made for a comapny that does blade sharpening.
 The site will contain:
 	-About us
 	-Collection and delivery disclaimer
@@ -10,13 +10,11 @@ The site will contain:
 	-Comment box
 	-Number of views
 	-Advert SirVic
-	-Advert CV
-	
-Technology used so far:
+
+Technology used:
 	-HTML 
 	-CSS
 	-Bootstrap
-
-Technology considered:
-	-NodeJS
 	-Firebase
+	-javascript
+	-Jquery
