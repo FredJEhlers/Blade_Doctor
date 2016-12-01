@@ -2,15 +2,6 @@ function enableEmail(bEnable){
   document.getElementById('userEmail').disabled = !bEnable;
 }
 
-$(document).ready(function () {
-    $(document).click(function (event) {
-        var clickover = $(event.target);
-        var _opened = $(".navbar-collapse").hasClass("navbar-collapse in");
-        if (_opened === true && !clickover.hasClass("navbar-toggle")) {
-            $("button.navbar-toggle").click();
-        }
-    });
-});
 
 var ref = new Firebase("https://blade-doctor.firebaseio.com");
 // Thanks to https://gist.github.com/hurjas/2660489#file-timestamp-js-L26
@@ -65,7 +56,6 @@ function updateCount(){
   var query = firebase.database().ref("Visitor");
   query.on("child_added", function(snapshot){
   var childData = snapshot.val();
-    console.log("Count: " + childData.Count)
     var intVal = parseInt(childData.Count,10);
     intVal = intVal + 1;
 
@@ -76,3 +66,41 @@ function updateCount(){
     }
   );
 }
+
+$(document).ready(function () {
+    $(document).click(function (event) {
+        var clickover = $(event.target);
+        var _opened = $(".navbar-collapse").hasClass("navbar-collapse in");
+        if (_opened === true && !clickover.hasClass("navbar-toggle")) {
+            $("button.navbar-toggle").click();
+        }
+    });
+
+    $("#bKnifePop").on("click", function() {
+    $('#imagepreview').attr('src', $('#bKnife').attr('src')); 
+    $('#previewModal').modal('show');});
+
+    $("#aKnifePop").on("click", function() {
+    $('#imagepreview').attr('src', $('#aKnife').attr('src')); 
+    $('#previewModal').modal('show');});
+
+
+    $("#bBayPop").on("click", function() {
+    $('#imagepreview').attr('src', $('#bBay').attr('src')); 
+    $('#previewModal').modal('show');});
+
+    $("#aBayPop").on("click", function() {
+    $('#imagepreview').attr('src', $('#aBay').attr('src')); 
+    $('#previewModal').modal('show');});
+
+    $("#sirVicPop").on("click", function() {
+    $('#vicpreview').attr('src', $('#sirVicAd').attr('src')); 
+    $('#modal').modal('show');});       
+
+    $('.navbar-collapse .menuEnd').click(function(){
+    $(".navbar-collapse").collapse('hide');}); 
+
+    updateCount();
+});
+
+

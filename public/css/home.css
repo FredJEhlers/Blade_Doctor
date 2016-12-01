@@ -41,10 +41,10 @@ body{
 
 /* End of modal CSS */
 /* start of menu CSS */
-.menu{
+.menu, .menuEnd{
   color: white !important;
 }
-.menu:hover{
+.menu:hover, .menuEnd:hover{
   color: red !important;
 }
 
@@ -63,14 +63,14 @@ body{
   color: #D90F0F;
   font-size: 80px;
   font-weight: bold;
-  font-family: 'XoloniumRegular', 'Times New Roman', Times, serif;
+  font-family: 'Times New Roman', Times, serif;
   text-shadow: 2px 2px 5px #0D0D0D;
 }
 
 #jumboh4{
   color: yellow;
   font-weight: bold;
-  font-family: 'XoloniumRegular', 'Times New Roman', Times, serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 /* End Jumbo header css */
 /* All Images and their respective CSS */
@@ -103,7 +103,7 @@ body{
 
 .Sections{
   font-weight: bold;
-  font-family: 'XoloniumRegular', 'Times New Roman', Times, serif;
+  font-family: 'Times New Roman', Times, serif;
   color: #D90F0F;
   text-shadow: 2px 2px 5px #0D0D0D;
   padding-top: 70px;
@@ -111,6 +111,13 @@ body{
 }
 /*End of text CSS*/
 /*Comment box CSS*/
+
+.commentDiv{
+    background-color: white;
+    padding: 15px;
+    border-radius: 25px;
+    margin: 10px 30px;
+}
 
 #commentSpan{
   float: right !important;
@@ -174,6 +181,10 @@ input[type="text"], input[type="email"], textarea{
   width: 100% !important; 
   border-radius: 45px;
   color: black;
+}
+
+input[type="email"]{
+  max-width: 60%;
 }
 
 textarea{

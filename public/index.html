@@ -10,7 +10,7 @@
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <title> Blade Doctor </title>
         <!-- custom font used according to client preference -->
-        <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/xolonium" type="text/css"/> 
+        
         
         <!-- firebase web app link start -->
         <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
@@ -31,13 +31,8 @@
         firebase.initializeApp(config);
         </script>
         <!-- firebase web app link end -->
-        <!-- bootstrap and jquery script tags start  -->
-        <script src="js/jquery-3.1.1.js"></script>
-        <script src="js/bootstrap.js"></script> 
-        <link href="css/bootstrap.css" rel="stylesheet"> 
-        <!-- custom js file to implement firebase -->
-        <script src="js/index.js"></script> 
         <!-- custom css file -->
+        <link href="css/bootstrap.css" rel="stylesheet">
         <link href="css/home.css" rel="stylesheet">
     </head>
 
@@ -56,26 +51,26 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a class="menu" href="#aboutus">About Us</a></li>
+                        <li class="active"><a class="menuEnd" href="#aboutus">About Us</a></li>
                         <li class="dropdown">
                             <a class="dropdown-toggle menu" data-toggle="dropdown" href="#">Prices and Pictures<span class="caret"></span></a>
                             <ul class="dropdown-menu navbar-inverse">
-                                <li><a class="menu" href="#types" >Blades and Prices</a></li>
-                                <li><a class="menu" href="#beforeAfter" >Before and After</a></li>
+                                <li><a class="menuEnd" href="#types" >Blades and Prices</a></li>
+                                <li><a class="menuEnd" href="#beforeAfter" >Before and After</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
                             <a class="dropdown-toggle menu" data-toggle="dropdown" href="#">Contact and Training<span class="caret"></span></a>
                             <ul class="dropdown-menu navbar-inverse">
-                                <li><a class="menu" href="#training" >Sharpening Training</a></li>
-                                <li><a class="menu" href="#contact" >Contact</a></li>  
+                                <li><a class="menuEnd" href="#training" >Sharpening Training</a></li>
+                                <li><a class="menuEnd" href="#contact" >Contact</a></li>  
                             </ul>
                         </li>
                         <li class="dropdown">
                             <a class="dropdown-toggle menu" data-toggle="dropdown" href="#">Comments and Sponsor<span class="caret"></span></a>
                             <ul class="dropdown-menu navbar-inverse">
-                                <li><a class="menu" href="#sirVic" style="color: white;">SirVic</a></li>
-                                <li><a class="menu" href="#addComment" style="color: white;">Comments</a></li>  
+                                <li><a class="menuEnd" href="#sirVic" style="color: white;">SirVic</a></li>
+                                <li><a class="menuEnd" href="#addComment" style="color: white;">Comments</a></li>  
                             </ul>
                         </li>   
                     </ul>
@@ -262,25 +257,7 @@
         </div>
         <!-- End modal div -->
         <!-- Start scripts to make modal images work -->
-        <script>$("#bKnifePop").on("click", function() {
-            $('#imagepreview').attr('src', $('#bKnife').attr('src')); 
-            $('#previewModal').modal('show');});
-        </script>            
         
-        <script>$("#aKnifePop").on("click", function() {
-            $('#imagepreview').attr('src', $('#aKnife').attr('src')); 
-            $('#previewModal').modal('show');});
-        </script>
-        
-        <script>$("#bBayPop").on("click", function() {
-            $('#imagepreview').attr('src', $('#bBay').attr('src')); 
-            $('#previewModal').modal('show');});
-        </script>          
-        
-        <script>$("#aBayPop").on("click", function() {
-            $('#imagepreview').attr('src', $('#aBay').attr('src')); 
-            $('#previewModal').modal('show');});
-        </script>
         <!-- End scripts for modals -->
         <!-- End Before and after -->
         <!-- Start Section product and training -->
@@ -328,10 +305,7 @@
                         </div>
                     </div>
                 </div>
-                <script>$("#sirVicPop").on("click", function() {
-                    $('#vicpreview').attr('src', $('#sirVicAd').attr('src')); 
-                    $('#modal').modal('show');});
-                </script>
+
             </div>
         </div>
         <!-- End section -->
@@ -341,10 +315,10 @@
                 <div class="comment-form">
                     <div class="header"><h1 id="addComment" class="Sections">Add Your Comment</h1></div>
                         <form action="#comments" onsubmit="postComment()">
-                            <div> 
+                            <div class="commentDiv"> 
                                 <input type="text" id="name" placeholder="Name" required/>
                             </div>
-                            <div>
+                            <div class="commentDiv">
                                 <textarea id="comment" rows="3" cols="20" placeholder="Comment" required></textarea>
                             </div>
                             <div>
@@ -366,6 +340,10 @@
     </div>
         <!-- End section -->
         <div id="foot" class="footer col-sm-12 text-center"></div> 
-        <script>updateCount();</script>
+         <!-- bootstrap and jquery script tags start  -->
+        <script src="js/jquery-3.1.1.js"></script>
+        <script src="js/bootstrap.js"></script>  
+        <!-- custom js file to implement firebase -->
+        <script src="js/index.js"></script> 
     </body>
 </html>
